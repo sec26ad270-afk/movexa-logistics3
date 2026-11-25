@@ -1,0 +1,9 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#101c35"><title>{% block title %}Movexa Logistics{% endblock %}</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"></head>
+<body><header><a class="brand" href="/"><span class="brand-mark">M</span><span class="brand-name">MOVEXA<small>LOGISTICS</small></span></a>
+<nav><a href="/">Home</a><a href="/#booking">Ship with us</a><a href="/track">Track shipment</a><a href="/partner">Partner</a><a class="nav-admin" href="/admin">Admin ↗</a></nav></header>
+<main>{% with messages = get_flashed_messages() %}{% if messages %}<div class="flash">{% for m in messages %}{{m}}{% endfor %}</div>{% endif %}{% endwith %}{% block content %}{% endblock %}</main>
+<footer><a class="brand footer-brand" href="/"><span class="brand-mark">M</span><span class="brand-name">MOVEXA<small>LOGISTICS</small></span></a><span>Move smarter. Deliver better.</span><span>© 2026 Movexa Logistics · Demo platform</span></footer></body></html>
